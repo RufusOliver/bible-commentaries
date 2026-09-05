@@ -46,6 +46,17 @@ const COMMENTARIES = [
   { id:'ambrosiaster', title:'Commentary on the Pauline Epistles', author:'Ambrosiaster (Pseudo-Ambrose)', year:380, era:'Early Latin exegete', desc:'The anonymous \u201cAmbrose\u2019-star\u201d of the fourth-century West \u2014 the oldest complete Latin commentary on the Pauline epistles, so penetrating that even Erasmus admired him.', tradition:['Church Fathers','Catholic'], provider:'ocdf', file:'ambrosiaster.json' },
   { id:'hilary-of-poitiers', title:'Commentary on the Gospel of Matthew', author:'Hilary of Poitiers', year:360, era:'Athanasius of the West', desc:'Hilary\u2019s commentary on Matthew \u2014 the first Latin verse-by-verse Gospel commentary that survives, written by the great defender of Nicaea in Gaul.', tradition:['Church Fathers','Catholic'], provider:'ocdf', file:'hilary-of-poitiers.json' },
   { id:'andreas-of-caesarea', title:'Commentary on the Apocalypse', author:'Andrew of Caesarea', year:610, era:'Byzantine apocalyptic exegesis', desc:'The classic Eastern commentary on Revelation \u2014 sober, orderly and much-loved in the Greek church, drawing on Methodius, Irenaeus and Origen.', tradition:['Church Fathers','Orthodox'], provider:'ocdf', file:'andreas-of-caesarea.json' },
+  { id:'jerome', title:'Commentaries on the Prophets, the Gospel of Matthew & the Psalms', author:'Jerome', year:410, era:'The great Latin scholar', desc:'The bluest of the Latin scholars, translator of the Vulgate \u2014 his magnificent commentaries on Isaiah, Jeremiah, Ezekiel, the Gospel of Matthew and the Psalms, bristling with Hebrew learning.', tradition:['Church Fathers','Catholic'], provider:'ocdf', file:'jerome.json' },
+  { id:'ephrem-the-syrian', title:'Commentaries & Hymns on the Scriptures', author:'Ephrem the Syrian', year:373, era:'The harp of the Holy Spirit', desc:'Ephrem of Nisibis \u2014 the most beloved poet-theologian of the Syrian church, whose Genesis commentary, Gospel harmonies and poetic exegesis sing the Scriptures back to the soul.', tradition:['Church Fathers','Orthodox'], provider:'ocdf', file:'ephrem-the-syrian.json' },
+  { id:'cassiodorus', title:'Commentary on the Psalms & Exposition of Scripture', author:'Cassiodorus', year:575, era:'Senator turned monk', desc:'The Roman senator who founded Vivarium, whose vast Psalms commentary became the staple of Latin exegesis \u2014 a gentle, learned introduction to the whole Bible for his monks and for us.', tradition:['Church Fathers','Catholic'], provider:'ocdf', file:'cassiodorus.json' },
+  { id:'theodore-of-mopsuestia', title:'Commentaries on the Gospel of John & the Psalms', author:'Theodore of Mopsuestia', year:428, era:'The great Antiochene', desc:'The most celebrated biblical critic of the early church \u2014 sober, historical Antiochene exposition of John, the Psalms, and the Pauline epistles.', tradition:['Church Fathers','Orthodox'], provider:'ocdf', file:'theodore-of-mopsuestia.json' },
+  { id:'didymus-the-blind', title:'Commentaries on Ecclesiastes, Job & the Psalms', author:'Didymus the Blind', year:395, era:'Alexandrian teacher', desc:'The great blind teacher of Alexandria who taught Jerome and Rufinus \u2014 surviving fragments of his commentaries on Ecclesiastes, Job, Genesis and the Psalms.', tradition:['Church Fathers','Orthodox'], provider:'ocdf', file:'didymus-the-blind.json' },
+  { id:'pseudo-chrysostom', title:'Opus Imperfectum in Matthaeum & Gospel Commentaries', author:'Pseudo-Chrysostom', year:500, era:'Early Latin homilist', desc:'The anonymous \u201cIncomplete Work on Matthew\u201d long attributed to Chrysostom \u2014 one of the most widely copied Gospel commentaries of the Middle Ages.', tradition:['Church Fathers','Orthodox'], provider:'ocdf', file:'pseudo-chrysostom.json' },
+  { id:'victorinus-of-pettau', title:'Commentary on the Apocalypse', author:'Victorinus of Pettau', year:303, era:'First Latin expositor', desc:'The earliest surviving Christian commentary on the whole Bible\u2019s last book \u2014 written by the martyr-bishop of Pettau, sober and millenarian.', tradition:['Church Fathers','Catholic'], provider:'ocdf', file:'victorinus-of-pettau.json' },
+  { id:'primasius-of-hadrumetum', title:'Commentary on the Apocalypse', author:'Primasius of Hadrumetum', year:560, era:'African expositor', desc:'The African bishop\u2019s great Revelation commentary \u2014 an ordered synthesis of Tyconius and Augustine, the fullest African account of the Apocalypse.', tradition:['Church Fathers','Catholic'], provider:'ocdf', file:'primasius-of-hadrumetum.json' },
+  { id:'apringius-of-beja', title:'Commentary on the Apocalypse', author:'Apringius of Beja', year:540, era:'Visigothic expositor', desc:'The seventh-century bishop of Beja whose Revelation commentary survives \u2014 a vigorous, plain spiritual reading of the last book.', tradition:['Church Fathers','Catholic'], provider:'ocdf', file:'apringius-of-beja.json' },
+  { id:'diodorus-of-tarsus', title:'Commentaries on the Psalms & the Epistle to the Romans', author:'Diodore of Tarsus', year:390, era:'Founder of the Antiochene school', desc:'The teacher of Theodore and Theodoret \u2014 surviving fragments of his literal, historical exegesis of the Psalms and Romans, the fountainhead of the Antiochene school.', tradition:['Church Fathers','Orthodox'], provider:'ocdf', file:'diodorus-of-tarsus.json' },
+  { id:'severian-of-gabala', title:'Homilies & Commentaries on the Pauline Epistles', author:'Severian of Gabala', year:408, era:'Byzantine preacher', desc:'The eloquent bishop of Gabala, Chrysostom\u2019s rival in Constantinople \u2014 surviving homilies and commentaries on the epistles of Paul.', tradition:['Church Fathers','Orthodox'], provider:'ocdf', file:'severian-of-gabala.json' },
 
   /* --- early church history (OCD structured-text) --- */
   { id:'eusebius-church-history', title:'Church History (Historia Ecclesiastica)', author:'Eusebius of Caesarea', year:313, era:'Early church history', desc:'The father of church history. Eusebius preserves the martyrs, teachers, heretics and apostolic succession of the first three centuries, from the archives of his own day.', tradition:['History'], category:'history', provider:'history', file:'eusebius-ecclesiastical-history.json' },
@@ -241,6 +252,61 @@ const BOOK_OVERRIDES = {
   ]),
   'luther-commentary-on-galatians': _B([
     ['Galatians','luther-commentary-on-galatians.json',6]
+  ]),
+  'jerome': _B([
+    ['1 Chronicles','_all',28],['1 Corinthians','_all',15],['1 Kings','_all',21],['1 Samuel','_all',24],
+    ['1 Thessalonians','_all',5],['1 Timothy','_all',6],['2 Chronicles','_all',35],['2 Corinthians','_all',11],
+    ['2 Samuel','_all',24],['2 Timothy','_all',4],['Acts','_all',27],['Amos','_all',9],['Colossians','_all',3],
+    ['Daniel','_all',14],['Deuteronomy','_all',32],['Ecclesiastes','_all',12],['Ephesians','_all',6],
+    ['Esther','_all',8],['Exodus','_all',34],['Ezekiel','_all',48],['Ezra','_all',10],['Galatians','_all',6],
+    ['Genesis','_all',49],['Habakkuk','_all',3],['Haggai','_all',2],['Hebrews','_all',12],['Hosea','_all',14],
+    ['Isaiah','_all',66],['Jeremiah','_all',52],['Joel','_all',3],['John','_all',21],['Jonah','_all',4],
+    ['Joshua','_all',24],['Judges','_all',20],['Lamentations','_all',4],['Leviticus','_all',22],
+    ['Luke','_all',23],['Malachi','_all',4],['Mark','_all',16],['Matthew','_all',28],['Micah','_all',7],
+    ['Nahum','_all',3],['Numbers','_all',33],['Obadiah','_all',1],['Philemon','_all',1],
+    ['Prayer of Azariah','_all',1],['Proverbs','_all',31],['Psalms','_all',148],['Revelation','_all',22],
+    ['Romans','_all',16],['Song of Solomon','_all',8],['Titus','_all',3],['Zechariah','_all',14],
+    ['Zephaniah','_all',3]
+  ]),
+  'ephrem-the-syrian': _B([
+    ['1 Kings','_all',22],['2 Kings','_all',22],['Acts','_all',22],['Daniel','_all',12],['Exodus','_all',34],
+    ['Genesis','_all',50],['Hebrews','_all',13],['Isaiah','_all',66],['Jeremiah','_all',49],['Job','_all',42],
+    ['John','_all',21],['Luke','_all',24],['Mark','_all',15],['Micah','_all',4],['Obadiah','_all',1],
+    ['Proverbs','_all',30],['Psalms','_all',139],['Zechariah','_all',14]
+  ]),
+  'cassiodorus': _B([
+    ['1 Corinthians','_all',15],['1 Samuel','_all',27],['Acts','_all',28],['Exodus','_all',32],
+    ['Ezekiel','_all',37],['Hebrews','_all',12],['Isaiah','_all',57],['Proverbs','_all',24],
+    ['Psalms','_all',149],['Song of Solomon','_all',6],['Wisdom','_all',11]
+  ]),
+  'theodore-of-mopsuestia': _B([
+    ['1 Corinthians','_all',15],['1 Timothy','_all',5],['2 Corinthians','_all',12],['2 Timothy','_all',4],
+    ['Hebrews','_all',13],['Hosea','_all',14],['John','_all',21],['Matthew','_all',18],['Philemon','_all',1],
+    ['Psalms','_all',72],['Romans','_all',15],['Titus','_all',2]
+  ]),
+  'didymus-the-blind': _B([
+    ['1 Corinthians','_all',16],['1 John','_all',5],['1 Peter','_all',4],['2 Corinthians','_all',13],
+    ['Acts','_all',21],['Ecclesiastes','_all',12],['Genesis','_all',16],['James','_all',4],['Job','_all',14],
+    ['John','_all',17],['Proverbs','_all',30],['Psalms','_all',40],['Wisdom','_all',13]
+  ]),
+  'pseudo-chrysostom': _B([
+    ['Luke','_all',19],['Mark','_all',11],['Matthew','_all',28]
+  ]),
+  'victorinus-of-pettau': _B([
+    ['1 Corinthians','_all',15],['John','_all',12],['Revelation','_all',22]
+  ]),
+  'primasius-of-hadrumetum': _B([
+    ['Isaiah','_all',35],['Revelation','_all',22]
+  ]),
+  'apringius-of-beja': _B([
+    ['Revelation','_all',22]
+  ]),
+  'diodorus-of-tarsus': _B([
+    ['Psalms','_all',50],['Romans','_all',15]
+  ]),
+  'severian-of-gabala': _B([
+    ['1 Corinthians','_all',15],['2 Corinthians','_all',13],['Colossians','_all',3],['Genesis','_all',19],
+    ['Hebrews','_all',12],['Prayer of Azariah','_all',1],['Romans','_all',10]
   ])
 };
 
