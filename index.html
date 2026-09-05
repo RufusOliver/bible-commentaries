@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christian Classics - Public Domain Library with TTS</title>
+<meta name="description" content="A study library of public-domain Christian classics: Bible commentaries (Matthew Henry, Gill, Spurgeon, Calvin, Haydock, Catena Aurea, the Church Fathers) and early church histories, with built-in text-to-speech reading.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='28' fill='%23f5e6c8'/><path d='M20 26 L32 16 L44 26 L44 46 L32 50 L20 46 Z' fill='%238a6a3f'/><path d='M20 26 L32 36 L44 26' fill='none' stroke='%2355391e' stroke-width='2'/></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="loadingBar"></div>
+
+<header>
+  <div class="brand" id="homeBtn" role="link" tabindex="0" aria-label="Home">
+    <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="28" fill="#f5e6c8"/><path d="M20 26 L32 16 L44 26 L44 46 L32 50 L20 46 Z" fill="#8a6a3f"/><path d="M20 26 L32 36 L44 26" fill="none" stroke="#55391e" stroke-width="2"/></svg>
+    <div>
+      <h1>Christian Classics</h1>
+      <small>Public domain library &middot; built-in TTS</small>
+    </div>
+  </div>
+  <input type="search" id="searchBox" class="hide" placeholder="Search this book..." aria-label="Search within the current book">
+  <div class="spacer"></div>
+  <button class="tool" id="settingsBtn" title="Reading settings">Settings</button>
+  <button class="tool" id="aboutBtn" title="Sources and license">About</button>
+</header>
+
+<main class="view">
+  <section id="library" class="view-section" aria-label="Commentary library"></section>
+  <section id="books" class="view-section hidden" aria-label="Books of a commentary"></section>
+  <section id="reader" class="view-section hidden" aria-label="Commentary reader"></section>
+</main>
+
+<footer id="footer">
+  Every text is <b>public domain</b> — free of copyright as of 2025. Data courtesy of the
+  <b>Open Christian Data</b> project (CC0), the <b>catholic-bible</b> Haydock dataset, and the
+  <b>Catena Aurea</b> dataset. Companion verse text: Berean Standard Bible (CC0).
+  <br>&copy; 2026 — built for study and research. This is a library of <i>classics</i>, commentary and history, not the text of Scripture.
+</footer>
+
+<div class="tts-bar dim" id="ttsBar" aria-label="Text to speech controls">
+  <span class="tts-progress" id="ttsProgress"></span>
+  <div class="tts-main">
+    <span class="tts-status" id="ttsStatus">Ready</span>
+    <button class="tts-btn" id="ttsPlay" title="Read from the beginning of this chapter" aria-label="Play reading">&#9654;</button>
+    <button class="tts-btn" id="ttsPause" title="Pause or resume" aria-label="Pause reading">&#10074;&#10074;</button>
+    <button class="tts-btn stop" id="ttsStop" title="Stop reading" aria-label="Stop reading">&#9632;</button>
+  </div>
+  <div class="tts-group">
+    <label for="ttsVoice">Voice</label>
+    <select class="sel" id="ttsVoice" aria-label="Select speech voice"></select>
+  </div>
+  <div class="tts-group">
+    <label for="ttsRate">Speed</label>
+    <input type="range" id="ttsRate" min="0.5" max="1.6" step="0.1" value="1" aria-label="Speech speed">
+  </div>
+  <div class="tts-group">
+    <label for="ttsPitch">Pitch</label>
+    <input type="range" id="ttsPitch" min="0.5" max="1.6" step="0.1" value="1" aria-label="Speech pitch">
+  </div>
+  <button class="tts-btn ghost" id="ttsExport" title="Download this chapter as a text file">&#8615; Text</button>
+</div>
+
+<div class="overlay" id="settingsOverlay" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+  <div class="box">
+    <div class="box-head"><h3 id="settingsTitle">Reading settings</h3><button class="xbtn" data-close="settingsOverlay" aria-label="Close">&times;</button></div>
+    <div class="box-body" id="settingsBody"></div>
+  </div>
+</div>
+<div class="overlay" id="aboutOverlay" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+  <div class="box">
+    <div class="box-head"><h3 id="aboutTitle">About &amp; sources</h3><button class="xbtn" data-close="aboutOverlay" aria-label="Close">&times;</button></div>
+    <div class="about" id="aboutBody"></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="js/data.js"></script>
+<script src="js/tts.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
