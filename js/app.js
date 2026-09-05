@@ -73,7 +73,7 @@ function renderLibrary(){
       <p>Every work here is in the <b>public domain</b> \u2014 free of copyright as of 2025 \u2014 the accumulated wisdom of the church across the centuries: Reformation and Victorian classics, the Catholic Douay tradition and the Eastern Fathers, and the great early-church histories. Read quietly, or press play and have the commentators <i>read aloud to you</i> with the built-in text-to-speech engine.</p>
       <div class="stats">
         <span><b>${COMMENTARIES.length}</b> works</span>
-        <span><b>Protestant \u00b7 Catholic \u00b7 Orthodox \u00b7 Church Fathers \u00b7 History</b></span>
+        <span><b>Protestant \u00b7 Catholic \u00b7 Orthodox \u00b7 Church Elders \u00b7 History</b></span>
         <span><b>200+ books &amp; church volumes</b></span>
         <span><b>$0</b> \u2014 all free, forever</span>
       </div>
@@ -615,7 +615,7 @@ function buildAbout(){
     <h4>Sources &amp; license</h4>
     <p>Text is drawn from public-domain datasets, each explicitly licensed for reuse:</p>
     <ul>
-      <li><a href="https://github.com/OpenChristianData/open-christian-data" target="_blank" rel="noopener">Open Christian Data</a> (CC0) \u2014 the commentaries, the scripture-linked Church Fathers (Theophylact, Chrysostom), and the church histories (Eusebius, Socrates, Sozomen, Schaff)</li>
+      <li><a href="https://github.com/OpenChristianData/open-christian-data" target="_blank" rel="noopener">Open Christian Data</a> (CC0) \u2014 the commentaries, the scripture-linked Church Elders (Theophylact, Chrysostom), and the church histories (Eusebius, Socrates, Sozomen, Schaff)</li>
       <li>Matthew Henry (1706), John Gill (1748), John Wesley (1765), Adam Clarke (1831), Albert Barnes (1834), John Calvin, Jamieson\u2013Fausset\u2013Brown (1871), Keil &amp; Delitzsch (1878), Spurgeon\u2019s <i>Treasury of David</i> (1870), Lightfoot (1875), A. T. Robertson (1930)</li>
       <li><a href="https://github.com/ronaldoscotti/catholic-bible" target="_blank" rel="noopener">catholic-bible</a> (public domain) \u2014 George Leo Haydock\u2019s Catholic commentary on the whole Bible, deuterocanon included</li>
       <li><a href="https://github.com/AlvaroBalbin/catena" target="_blank" rel="noopener">Catena Aurea dataset</a> (public domain) \u2014 St. Thomas Aquinas on the four Gospels, trans. J. H. Newman (1841\u201345)</li>

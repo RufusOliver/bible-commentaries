@@ -4,8 +4,10 @@ A study library of **public-domain Christian classics** — the church's accumul
 teaching on Scripture **and** its early history: Protestant commentaries (Matthew
 Henry, John Gill, Spurgeon, Calvin, Adam Clarke, Albert Barnes, Wesley, Ryle,
 Luther, Jamieson–Fausset–Brown, Keil & Delitzsch, Lightfoot, Robertson), the
-Catholic tradition (Haydock, Aquinas' *Catena Aurea*), the Church Fathers on
-Scripture (Augustine, Origen, Jerome, Ephrem the Syrian, Bede, Cyril of
+Catholic tradition (Haydock, Aquinas' *Catena Aurea*), the Church Elders on
+Scripture (Augustine — the Tractates on John and Expositions on the Psalms —
+Origen, Jerome, Ephrem the Syrian, Gregory the Great's *Moralia in Job*,
+Gregory of Nyssa, Ambrose of Milan, the *Glossa Ordinaria*, Bede, Cyril of
 Alexandria, Theodoret, Theodore of Mopsuestia, Cassiodorus, Didymus the Blind,
 Chrysostom, Theophylact of Ohrid, Oecumenius, Ambrosiaster, Hilary, Andrew of
 Caesarea, Victorinus, Primasius, Apringius, Diodore, Severian, Pseudo-Chrysostom),
@@ -18,7 +20,7 @@ built-in **text-to-speech** player so every page can be read aloud.
 
 ## Features
 
-- **42 works** across traditions: Protestant · Catholic · Orthodox · Church Fathers ·
+- **48 works** across traditions: Protestant · Catholic · Orthodox · Church Elders ·
   Church history, covering the whole Bible (deuterocanon included) plus multi-volume histories
 - **Library / book / chapter / passage** navigation with nearby-note cross-reference panel
 - **Built-in TTS** (Web Speech API): play, pause/resume, stop, per-note **Read** buttons,
@@ -72,8 +74,9 @@ js/tts.js         Web Speech API engine
 This project is a small dedication of study to the many faithful commentators and
 church historians — Henry, Gill, Wesley, Clarke, Barnes, Calvin, Spurgeon, Ryle,
 Luther, Lightfoot, Robertson, Haydock, Aquinas, Augustine, Origen, Jerome, Ephrem,
-Bede, Cyril, Theodoret, Theodore, Cassiodorus, Didymus, Chrysostom, Theophylact,
-Oecumenius, Ambrosiaster, Hilary, Andrew, Victorinus, Primasius, Apringius,
-Diodore, Severian, Eusebius, Socrates, Sozomen, and Schaff — whose public-domain
-labors continue to teach the church.
+Bede, Cyril, Theodoret, Theodore, Cassiodorus, Didymus, Gregory the Great,
+Gregory of Nyssa, Ambrose, Chrysostom, Theophylact, Oecumenius, Ambrosiaster,
+Hilary, Andrew, Victorinus, Primasius, Apringius, Diodore, Severian, the
+medieval Glossators, Eusebius, Socrates, Sozomen, and Schaff — whose
+public-domain labors continue to teach the church.
 *Soli Deo Gloria.*
