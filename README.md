@@ -4,15 +4,15 @@ A study library of **public-domain Christian classics** — the church's accumul
 teaching on Scripture **and** its early history: Protestant commentaries (Matthew
 Henry, John Gill, Spurgeon, Calvin, Adam Clarke, Albert Barnes, Wesley, Ryle,
 Luther, Jamieson–Fausset–Brown, Keil & Delitzsch, Lightfoot, Robertson), the
-Catholic tradition (Haydock, Aquinas' *Catena Aurea*), the Church Elders on
-Scripture (Augustine — the Tractates on John and Expositions on the Psalms —
-Origen, Jerome, Ephrem the Syrian, Gregory the Great's *Moralia in Job*,
-Gregory of Nyssa, Ambrose of Milan, the *Glossa Ordinaria*, Bede, Cyril of
-Alexandria, Theodoret, Theodore of Mopsuestia, Cassiodorus, Didymus the Blind,
-Chrysostom, Theophylact of Ohrid, Oecumenius, Ambrosiaster, Hilary, Andrew of
-Caesarea, Victorinus, Primasius, Apringius, Diodore, Severian, Pseudo-Chrysostom),
-and the great church histories (Eusebius, Socrates, Sozomen, Schaff) — with a
-built-in **text-to-speech** player so every page can be read aloud.
+Catholic tradition (Haydock, Aquinas' *Catena Aurea*, the *Glossa Ordinaria*,
+Nicholas of Lyra), the Church Elders on Scripture (Augustine's *Tractates on
+John*, *Expositions on the Psalms* and *Homilies on 1 John*; Chrysostom's full
+homily series on Matthew, John, Acts, Romans, the Pauline Epistles and Hebrews;
+Jerome, Origen, Ambrose, Ephrem, Gregory the Great's *Moralia in Job*, Gregory
+of Nyssa, Cyril, Theodoret, Theodore, Taskodad's Syriac commentaries, Hippolytus
+on Daniel, Tyconius and Victorinus on the Apocalypse, and fifty more), and the
+great church histories (Eusebius, Socrates, Sozomen, Schaff) — with a built-in
+**text-to-speech** player so every page can be read aloud.
 
 > This is a library of *classic Christian writing*, not the text of scripture.
 > All works are **public domain — free of copyright as of 2025** (US: published
@@ -20,7 +20,7 @@ built-in **text-to-speech** player so every page can be read aloud.
 
 ## Features
 
-- **48 works** across traditions: Protestant · Catholic · Orthodox · Church Elders ·
+- **89 works** across traditions: Protestant · Catholic · Orthodox · Church Elders ·
   Church history, covering the whole Bible (deuterocanon included) plus multi-volume histories
 - **Library / book / chapter / passage** navigation with nearby-note cross-reference panel
 - **Built-in TTS** (Web Speech API): play, pause/resume, stop, per-note **Read** buttons,
@@ -73,10 +73,11 @@ js/tts.js         Web Speech API engine
 
 This project is a small dedication of study to the many faithful commentators and
 church historians — Henry, Gill, Wesley, Clarke, Barnes, Calvin, Spurgeon, Ryle,
-Luther, Lightfoot, Robertson, Haydock, Aquinas, Augustine, Origen, Jerome, Ephrem,
-Bede, Cyril, Theodoret, Theodore, Cassiodorus, Didymus, Gregory the Great,
-Gregory of Nyssa, Ambrose, Chrysostom, Theophylact, Oecumenius, Ambrosiaster,
-Hilary, Andrew, Victorinus, Primasius, Apringius, Diodore, Severian, the
-medieval Glossators, Eusebius, Socrates, Sozomen, and Schaff — whose
-public-domain labors continue to teach the church.
+Luther, Lightfoot, Robertson, Haydock, Aquinas, Augustine, Chrysostom, Origen,
+Jerome, Ambrose, Ephrem, Bede, Cyril, Theodoret, Theodore, Cassiodorus, Didymus,
+Gregory the Great, Gregory of Nyssa, Chromatius, Hippolytus, Tyconius, Victorinus,
+Isho'dad, Olympiodorus, Hesychius, Photius, John of Damascus, Philo, Hilary of
+Arles, Haimo, Rabanus, Remigius, Robert of Tombelaine, Aponius, Titus of Bostra,
+Julian of Eclanum, Nicholas of Lyra, the medieval Glossators, Eusebius, Socrates,
+Sozomen, and Schaff — whose public-domain labors continue to teach the church.
 *Soli Deo Gloria.*

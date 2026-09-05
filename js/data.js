@@ -63,6 +63,47 @@ const COMMENTARIES = [
   { id:'glossa-ordinaria', title:'The Ordinary Gloss on the Gospels', author:'Anselm of Laon and the Glossators', year:1150, era:'The medieval standard commentary', desc:'The Glossa Ordinaria \u2014 for centuries the church\u2019s standard tool, an interlinear margin of the choicest Fathers\u2019 sayings on the Gospel text, gathered at Laon and used throughout medieval Christendom.', tradition:['Church Elders','Catholic'], provider:'ocdf', file:'glossa-ordinaria.json' },
   { id:'ambrose-of-milan', title:'Commentaries on Luke, the Psalms & Genesis', author:'Ambrose of Milan', year:390, era:'The eloquent bishop', desc:'The great Milanese bishop whose preaching won Augustine for Christ \u2014 his verse-by-verse commentary on the Gospel of Luke, the Explanations of Twelve Psalms and the hexaemeral homilies on Genesis.', tradition:['Church Elders','Catholic'], provider:'ocdf', file:'ambrose-of-milan.json' },
   { id:'gregory-of-nyssa', title:'Commentaries on the Song of Songs & Ecclesiastes', author:'Gregory of Nyssa', year:390, era:'The mystic of Cappadocia', desc:'Gregory of Nyssa, the most profound theologian of the three Cappadocians \u2014 his fresh, contemplative commentaries on the Song of Songs and Ecclesiastes, and his homilies on the Beatitudes.', tradition:['Church Elders','Orthodox'], provider:'ocdf', file:'gregory-of-nyssa.json' },
+  { id:'alcuin-of-york', title:'Expositions on the Apocalypse & Inquiries on John', author:'Alcuin of York', year:800, era:'The Carolingian schoolmaster', desc:'The most learned man of Charlemagne\u2019s court \u2014 his methodical Exposition on the Apocalypse and Questions on the Gospel of John, answering the schools from the Fathers.', tradition:['Church Elders','Catholic'], provider:'ocdf', file:'alcuin-of-york.json' },
+  { id:'aponius', title:'Explanation of the Song of Songs', author:'Aponius (Apponius)', year:420, era:'Early Latin exegete', desc:'An obscure fifth-century Italian monk whose vivid mystical Explanation of the Song of Songs survives \u2014 embroidering Origen and Ambrose into a whole volume on the Bridegroom and the Bride.', tradition:['Church Elders','Catholic'], provider:'ocdf', file:'aponius.json' },
+  { id:'chromatius-of-aquileia', title:'Commentary on the Gospel of Matthew', author:'Chromatius of Aquileia', year:405, era:'Late Latin expositor', desc:'The bishop of Aquileia, friend of Jerome and Rufinus \u2014 his Commentary on Matthew, warm, pastoral, and only rediscovered in modern times, is one of the rare treasures of the old Latin church.', tradition:['Church Elders','Catholic'], provider:'ocdf', file:'chromatius-of-aquileia.json' },
+  { id:'gregory-of-elvira', title:'Tractates on the Song of Songs & the Scriptures', author:'Gregory of Elvira', year:400, era:'Spanish bishop', desc:'The Spanish bishop whose feast-day Tractates on the Song of Songs and other scriptures survive \u2014 Christ-mystical readings in the school of Cyprian and the Alexandria of the West.', tradition:['Church Elders','Catholic'], provider:'ocdf', file:'gregory-of-elvira.json' },
+  { id:'haimo-of-auxerre', title:'Commentaries on Jonah & 2 Thessalonians', author:'Haimo of Auxerre', year:855, era:'Carolingian commentator', desc:'The Benedictine master of Auxerre whose commentaries carried the Fathers into the ninth century \u2014 on the poetry of Jonah and the day of the Lord in Paul.', tradition:['Church Elders','Catholic'], provider:'ocdf', file:'haimo-of-auxerre.json' },
+  { id:'hippolytus-of-rome', title:'Commentaries on Daniel, the Song of Songs & the Scriptures', author:'Hippolytus of Rome', year:235, era:'Third-century Roman teacher', desc:'The Roman presbyter and martyr \u2014 the earliest surviving Christian commentary on Daniel, the homilies on the Song of Songs, and exegetical fragments on the Gospels, bold and chiliastic.', tradition:['Church Elders','Catholic'], provider:'ocdf', file:'hippolytus-of-rome.json' },
+  { id:'hilary-of-arles', title:'Commentary on the Catholic Epistles', author:'Hilary of Arles', year:449, era:'Gallic bishop', desc:'The metropolitan of Arles whose plain, copious Commentary on the Catholic Epistles survives intact \u2014 practical, patristic and thorough.', tradition:['Church Elders','Catholic'], provider:'ocdf', file:'hilary-of-arles.json' },
+  { id:'ishodad-of-merv', title:'Commentaries on the Old Testament', author:'Isho\u2019dad of Merv', year:850, era:'Syriac exegete', desc:'The ninth-century Syriac bishop whose vast commentaries on the Old and New Testaments preserve the school of Edessa \u2014 on Job, Kings, Isaiah and Daniel.', tradition:['Church Elders','Orthodox'], provider:'ocdf', file:'ishodad-of-merv.json' },
+  { id:'julian-of-eclanum', title:'Commentary on the Book of Job', author:'Julian of Eclanum', year:425, era:'Late Latin exegete', desc:'The gifted Italian bishop\u2019s literal Commentary on Job \u2014 learned fragments of the most skillful Latin exegete of his age, later swept away with Pelagius.', tradition:['Church Elders','Catholic'], provider:'ocdf', file:'julian-of-eclanum.json' },
+  { id:'nicholas-of-lyra', title:'Postilla on the Apocalypse & Thessalonians', author:'Nicholas of Lyra', year:1325, era:'The last of the glossators', desc:'The medieval postillator whose Postilla became the standard tool of the later schools \u2014 on the Apocalypse and the letters to the Thessalonians, literal and Hebrew-literate.', tradition:['Church Elders','Catholic'], provider:'ocdf', file:'nicholas-of-lyra.json' },
+  { id:'olympiodorus-of-alexandria', title:'Commentaries on Job, Ecclesiastes & Baruch', author:'Olympiodorus of Alexandria', year:550, era:'Alexandrian deacon', desc:'The Alexandrian deacon whose commentaries on Job and Ecclesiastes survive \u2014 plain and pious, the last voice of the Alexandrian school.', tradition:['Church Elders','Orthodox'], provider:'ocdf', file:'olympiodorus-of-alexandria.json' },
+  { id:'paterius', title:'Excerpts on the Pentateuch', author:'Paterius', year:600, era:'Gregory\u2019s secretary', desc:'The disciple of Pope Gregory the Great who wove his master\u2019s Moralia and expositions into a running commentary anthology on the books of Moses.', tradition:['Church Elders','Catholic'], provider:'ocdf', file:'paterius.json' },
+  { id:'philo-of-alexandria', title:'Allegorical Commentary on Genesis', author:'Philo of Alexandria', year:40, era:'Alexandrian Jewish expositor', desc:'The first great biblical commentator \u2014 Philo\u2019s allegorical readings of Genesis that shaped Clement, Origen and the whole Christian school of exegesis.', tradition:['Church Elders','Patristic'], provider:'ocdf', file:'philo-of-alexandria.json' },
+  { id:'procopius-of-gaza', title:'Catena on Isaiah & Numbers', author:'Procopius of Gaza', year:528, era:'The catenist of Gaza', desc:'The rhetor of Gaza, father of the catena method \u2014 his chain of patristic readings on Isaiah and Numbers, one century before the Dark Ages closed.', tradition:['Church Elders','Orthodox'], provider:'ocdf', file:'procopius-of-gaza.json' },
+  { id:'rabanus-maurus', title:'Commentaries on Matthew, Esther, Sirach & Wisdom', author:'Rabanus Maurus', year:830, era:'The teacher of Germany', desc:'The great Carolingian abbot of Fulda who distilled the Fathers into methodical commentaries \u2014 on Matthew, Esther, Sirach and Wisdom.', tradition:['Church Elders','Catholic'], provider:'ocdf', file:'rabanus-maurus.json' },
+  { id:'remigius-of-auxerre', title:'Commentary on the Gospel of Matthew', author:'Remigius of Auxerre', year:908, era:'Carolingian commentator', desc:'The monk of Auxerre whose vast Commentary on Matthew carried patristic exegesis into the tenth century and the nascent schools.', tradition:['Church Elders','Catholic'], provider:'ocdf', file:'remigius-of-auxerre.json' },
+  { id:'robert-of-tombelaine', title:'Commentary on the Song of Songs', author:'Robert of Tombelaine', year:1087, era:'Benedictine contemplative', desc:'The Norman hermit of Mont-Saint-Michel whose long Commentary on the Song of Songs paints every verse in human affection and divine love \u2014 long believed to be Gregory\u2019s.', tradition:['Church Elders','Catholic'], provider:'ocdf', file:'robert-of-tombelaine.json' },
+  { id:'ticonius', title:'Commentary on the Apocalypse & the Book of Rules', author:'Tyconius', year:390, era:'The African exegete', desc:'The Donatist lay theologian whose commentary and seven Rules of figurative interpretation shaped Augustine and all later Revelation study.', tradition:['Church Elders','Catholic'], provider:'ocdf', file:'ticonius.json' },
+  { id:'titus-of-bostra', title:'Commentary on the Gospel of Luke', author:'Titus of Bostra', year:370, era:'Antiochene expositor', desc:'The metropolitan of Bostra whose lucid Commentary on the Gospel of Luke survives along with his apology against the Manichees.', tradition:['Church Elders','Orthodox'], provider:'ocdf', file:'titus-of-bostra.json' },
+  { id:'pseudo-jerome', title:'Commentary on the Gospel of Mark', author:'Pseudo-Jerome', year:550, era:'Spiritual reading of Mark', desc:'The early-medieval Commentary on Mark long carried under Jerome\u2019s name \u2014 lively, spiritual, and one of the very few ancient expositions of the second Gospel.', tradition:['Church Elders','Catholic'], provider:'ocdf', file:'pseudo-jerome.json' },
+  { id:'hesychius-of-jerusalem', title:'Commentaries on Job, the Psalms & the Catholic Epistles', author:'Hesychius of Jerusalem', year:450, era:'Palestinian presbyter', desc:'The Jerusalem presbyter whose exegetical notes on Job, the Psalms, Wisdom and James survive \u2014 learned, moral, entire.', tradition:['Church Elders','Orthodox'], provider:'ocdf', file:'hesychius-of-jerusalem.json' },
+  { id:'photios-i-of-constantinople', title:'Commentary on the Epistle to the Hebrews', author:'Photius of Constantinople', year:880, era:'The great patriarch-scholar', desc:'The ecumenical patriarch of Constantinople, author of the Bibliotheca \u2014 his commentary fragments on the Epistle to the Hebrews.', tradition:['Church Elders','Orthodox'], provider:'ocdf', file:'photios-i-of-constantinople.json' },
+  { id:'john-damascene', title:'Commentary on the Pauline Epistles', author:'John of Damascus', year:745, era:'The last of the Fathers', desc:'The last of the Greek Fathers \u2014 his catena-commentary on Paul and scripture-rich dogmatics, the summa of Eastern patristics.', tradition:['Church Elders','Orthodox'], provider:'ocdf', file:'john-damascene.json' },
+  { id:'chrysostom-homilies-on-matthew', title:'The Homilies on the Gospel of Matthew', author:'John Chrysostom', year:390, era:'The golden-mouthed at Antioch', desc:'The full ninety homilies on Matthew preached at Antioch \u2014 verse by verse, the most famous commentary on the first Gospel in the Eastern church.', tradition:['Church Elders','Orthodox'], provider:'aug', file:'chrysostom-homilies-on-matthew.json' },
+  { id:'chrysostom-homilies-on-john', title:'The Homilies on the Gospel of John', author:'John Chrysostom', year:401, era:'The golden-mouthed at Constantinople', desc:'The eighty-eight homilies on the fourth Gospel \u2014 luminous verse-by-verse preaching on the divinity of Christ, the crown of the Antiochene school.', tradition:['Church Elders','Orthodox'], provider:'aug', file:'chrysostom-homilies-on-john.json' },
+  { id:'chrysostom-homilies-on-acts', title:'The Homilies on the Acts of the Apostles', author:'John Chrysostom', year:400, era:'The golden-mouthed at Constantinople', desc:'The fifty-five homilies on Acts \u2014 the first great commentary on the earliest history of the church, preached at Constantinople.', tradition:['Church Elders','Orthodox'], provider:'aug', file:'chrysostom-homilies-on-acts.json' },
+  { id:'chrysostom-homilies-on-romans', title:'The Homilies on the Epistle to the Romans', author:'John Chrysostom', year:391, era:'The golden-mouthed at Antioch', desc:'The thirty-two homilies on Romans \u2014 Paul greeted in the Antiochene market places of the soul, with the famous preface listing his nine excellences.', tradition:['Church Elders','Orthodox'], provider:'aug', file:'chrysostom-homilies-on-romans.json' },
+  { id:'chrysostom-homilies-on-1-corinthians', title:'The Homilies on the First Epistle to the Corinthians', author:'John Chrysostom', year:392, era:'The golden-mouthed at Antioch', desc:'The forty-four homilies on 1 Corinthians \u2014 the noblest commentary on Paul\u2019s great epistle of love and order, preached troop by troop at Antioch.', tradition:['Church Elders','Orthodox'], provider:'aug', file:'chrysostom-homilies-on-1-corinthians.json' },
+  { id:'chrysostom-homilies-on-2-corinthians', title:'The Homilies on the Second Epistle to the Corinthians', author:'John Chrysostom', year:393, era:'The golden-mouthed at Antioch', desc:'The thirty homilies on 2 Corinthians \u2014 the apostle\u2019s wounds and glory unfolded for the suffering church of the fourth century.', tradition:['Church Elders','Orthodox'], provider:'aug', file:'chrysostom-homilies-on-2-corinthians.json' },
+  { id:'chrysostom-commentary-on-galatians', title:'Commentary on the Epistle to the Galatians', author:'John Chrysostom', year:395, era:'Argument and grace', desc:'Chrysostom\u2019s continuous commentary on Galatians \u2014 Paul\u2019s trumpet against the Judaizers, defended by the golden tongue.', tradition:['Church Elders','Orthodox'], provider:'aug', file:'chrysostom-commentary-on-galatians.json' },
+  { id:'chrysostom-homilies-on-ephesians', title:'The Homilies on the Epistle to the Ephesians', author:'John Chrysostom', year:399, era:'The golden-mouthed at Constantinople', desc:'The twenty-four homilies on Ephesians \u2014 the church as the body of Christ, mystically adorned and daily built.', tradition:['Church Elders','Orthodox'], provider:'aug', file:'chrysostom-homilies-on-ephesians.json' },
+  { id:'chrysostom-homilies-on-philippians', title:'The Homilies on the Epistle to the Philippians', author:'John Chrysostom', year:399, era:'The golden-mouthed at Constantinople', desc:'The fifteen homilies on Philippians \u2014 joy in every circumstance, preached to a church in bonds.', tradition:['Church Elders','Orthodox'], provider:'aug', file:'chrysostom-homilies-on-philippians.json' },
+  { id:'chrysostom-homilies-on-colossians', title:'The Homilies on the Epistle to the Colossians', author:'John Chrysostom', year:398, era:'The golden-mouthed at Constantinople', desc:'The twelve homilies on Colossians \u2014 Christ the head of all, against the angel-worshippers and the false wisdom.', tradition:['Church Elders','Orthodox'], provider:'aug', file:'chrysostom-homilies-on-colossians.json' },
+  { id:'chrysostom-homilies-on-1-thessalonians', title:'The Homilies on the First Epistle to the Thessalonians', author:'John Chrysostom', year:399, era:'The golden-mouthed at Constantinople', desc:'The eleven homilies on 1 Thessalonians \u2014 on the beginning of the church at Thessalonica and the blessed hope of resurrection.', tradition:['Church Elders','Orthodox'], provider:'aug', file:'chrysostom-homilies-on-1-thessalonians.json' },
+  { id:'chrysostom-homilies-on-2-thessalonians', title:'The Homilies on the Second Epistle to the Thessalonians', author:'John Chrysostom', year:399, era:'The golden-mouthed at Constantinople', desc:'The five homilies on 2 Thessalonians \u2014 false alarms about the day of the Lord answered with patience and work.', tradition:['Church Elders','Orthodox'], provider:'aug', file:'chrysostom-homilies-on-2-thessalonians.json' },
+  { id:'chrysostom-homilies-on-1-timothy', title:'The Homilies on the First Epistle to Timothy', author:'John Chrysostom', year:403, era:'The golden-mouthed at Constantinople', desc:'The eighteen homilies on 1 Timothy \u2014 the pastoral office opened, from the charge to the crowning of the pastor\u2019s flock.', tradition:['Church Elders','Orthodox'], provider:'aug', file:'chrysostom-homilies-on-1-timothy.json' },
+  { id:'chrysostom-homilies-on-2-timothy', title:'The Homilies on the Second Epistle to Timothy', author:'John Chrysostom', year:405, era:'The golden-mouthed at Constantinople', desc:'The ten homilies on 2 Timothy \u2014 Paul\u2019s farewell armory to the young bishop, preached as the horizon darkened.', tradition:['Church Elders','Orthodox'], provider:'aug', file:'chrysostom-homilies-on-2-timothy.json' },
+  { id:'chrysostom-homilies-on-titus', title:'The Homilies on the Epistle to Titus', author:'John Chrysostom', year:405, era:'The golden-mouthed at Constantinople', desc:'The six homilies on Titus \u2014 the little bishop\u2019s epistle of good works, well ordered by the golden expositor.', tradition:['Church Elders','Orthodox'], provider:'aug', file:'chrysostom-homilies-on-titus.json' },
+  { id:'chrysostom-homilies-on-philemon', title:'The Homilies on the Epistle to Philemon', author:'John Chrysostom', year:403, era:'The golden-mouthed at Constantinople', desc:'The three homilies on Philemon \u2014 one runaway slave, one master, one apostle, and the whole Epistle in a single moral scene.', tradition:['Church Elders','Orthodox'], provider:'aug', file:'chrysostom-homilies-on-philemon.json' },
+  { id:'chrysostom-homilies-on-hebrews', title:'The Homilies on the Epistle to the Hebrews', author:'John Chrysostom', year:404, era:'The golden-mouthed at Constantinople', desc:'The thirty-four homilies on Hebrews \u2014 the priesthood of Christ unfolded with the full daylight of the golden preacher.', tradition:['Church Elders','Orthodox'], provider:'aug', file:'chrysostom-homilies-on-hebrews.json' },
+  { id:'augustine-homilies-on-first-john', title:'The Homilies on the First Epistle of John', author:'Augustine of Hippo', year:407, era:'Preached at Hippo', desc:'Augustine\u2019s ten homilies on 1 John \u2014 love teaching love, preached at Hippo over the days of Easter Week in 407, perhaps his most beloved short course.', tradition:['Church Elders','Catholic'], provider:'aug', file:'augustine-homilies-on-first-john.json' },
 
   /* --- early church history (OCD structured-text) --- */
   { id:'eusebius-church-history', title:'Church History (Historia Ecclesiastica)', author:'Eusebius of Caesarea', year:313, era:'Early church history', desc:'The father of church history. Eusebius preserves the martyrs, teachers, heretics and apostolic succession of the first three centuries, from the archives of his own day.', tradition:['History'], category:'history', provider:'history', file:'eusebius-ecclesiastical-history.json' },
@@ -352,7 +393,102 @@ const BOOK_OVERRIDES = {
     ['Ephesians','_all',4],['Exodus','_all',35],['Genesis','_all',29],['Hebrews','_all',12],
     ['Isaiah','_all',66],['John','_all',21],['Luke','_all',24],['Mark','_all',12],['Philippians','_all',2],
     ['Proverbs','_all',31],['Psalms','_all',148],['Romans','_all',14],['Song of Solomon','_all',6]
-  ])
+  ]),
+  'alcuin-of-york': _B([
+    ['John','_all',21],['Revelation','_all',21]
+  ]),
+  'aponius': _B([
+    ['Isaiah','_all',59],['Song of Solomon','_all',8]
+  ]),
+  'chromatius-of-aquileia': _B([
+    ['Genesis','_all',39],['Isaiah','_all',49],['Matthew','_all',27],['Wisdom','_all',16]
+  ]),
+  'gregory-of-elvira': _B([
+    ['Song of Solomon','_all',3]
+  ]),
+  'haimo-of-auxerre': _B([
+    ['2 Thessalonians','_all',3],['Jonah','_all',4]
+  ]),
+  'hippolytus-of-rome': _B([
+    ['1 Corinthians','_all',15],['1 Peter','_all',4],['1 Timothy','_all',6],['2 Corinthians','_all',13],
+    ['2 Peter','_all',3],['Acts','_all',28],['Colossians','_all',2],['Daniel','_all',13],['Ephesians','_all',5],
+    ['Ezekiel','_all',3],['Galatians','_all',5],['Genesis','_all',49],['Hebrews','_all',12],['Isaiah','_all',53],
+    ['John','_all',20],['Luke','_all',23],['Mark','_all',13],['Philippians','_all',3],['Proverbs','_all',30],
+    ['Psalms','_all',139],['Revelation','_all',21],['Romans','_all',14],['Song of Solomon','_all',4]
+  ]),
+  'hilary-of-arles': _B([
+    ['1 John','_all',5],['1 Peter','_all',5],['2 John','_all',1],['2 Peter','_all',3],['3 John','_all',1],
+    ['James','_all',5],['Jude','_all',1]
+  ]),
+  'ishodad-of-merv': _B([
+    ['1 John','_all',5],['1 Kings','_all',22],['2 Kings','_all',25],['Daniel','_all',12],['Isaiah','_all',66],
+    ['Job','_all',42],['Joel','_all',3]
+  ]),
+  'julian-of-eclanum': _B([
+    ['Job','_all',41]
+  ]),
+  'nicholas-of-lyra': _B([
+    ['1 Thessalonians','_all',2],['2 Thessalonians','_all',3],['Revelation','_all',20]
+  ]),
+  'olympiodorus-of-alexandria': _B([
+    ['Baruch','_all',6],['Ecclesiastes','_all',3],['Job','_all',42]
+  ]),
+  'paterius': _B([
+    ['Deuteronomy','_all',33],['Exodus','_all',34],['Leviticus','_all',19],['Numbers','_all',35]
+  ]),
+  'philo-of-alexandria': _B([
+    ['Genesis','_all',17]
+  ]),
+  'procopius-of-gaza': _B([
+    ['Isaiah','_all',65],['Numbers','_all',34]
+  ]),
+  'rabanus-maurus': _B([
+    ['Acts','_all',14],['Esther','_all',10],['Matthew','_all',28],['Sirach (Ecclesiasticus)','_all',51],['Wisdom','_all',19]
+  ]),
+  'remigius-of-auxerre': _B([
+    ['Mark','_all',9],['Matthew','_all',28]
+  ]),
+  'robert-of-tombelaine': _B([
+    ['Song of Solomon','_all',8]
+  ]),
+  'ticonius': _B([
+    ['Revelation','_all',19]
+  ]),
+  'titus-of-bostra': _B([
+    ['Luke','_all',22]
+  ]),
+  'pseudo-jerome': _B([
+    ['Mark','_all',16]
+  ]),
+  'hesychius-of-jerusalem': _B([
+    ['James','_all',5],['Job','_all',20],['Psalms','_all',50],['Wisdom','_all',13]
+  ]),
+  'photios-i-of-constantinople': _B([
+    ['Hebrews','_all',13]
+  ]),
+  'john-damascene': _B([
+    ['2 Timothy','_all',4],['Daniel','_all',12],['Ephesians','_all',4],['Exodus','_all',34],['Ezekiel','_all',44],
+    ['Galatians','_all',2],['Genesis','_all',9],['Isaiah','_all',66],['John','_all',20],['Joshua','_all',5],
+    ['Luke','_all',24],['Mark','_all',16],['Psalms','_all',135],['Romans','_all',11],['Wisdom','_all',14]
+  ]),
+  'chrysostom-homilies-on-matthew': _B([['Matthew','_all',28]]),
+  'chrysostom-homilies-on-john': _B([['John','_all',21]]),
+  'chrysostom-homilies-on-acts': _B([['Acts','_all',28]]),
+  'chrysostom-homilies-on-romans': _B([['Romans','_all',16]]),
+  'chrysostom-homilies-on-1-corinthians': _B([['1 Corinthians','_all',16]]),
+  'chrysostom-homilies-on-2-corinthians': _B([['2 Corinthians','_all',13]]),
+  'chrysostom-commentary-on-galatians': _B([['Galatians','_all',6]]),
+  'chrysostom-homilies-on-ephesians': _B([['Ephesians','_all',6]]),
+  'chrysostom-homilies-on-philippians': _B([['Philippians','_all',4]]),
+  'chrysostom-homilies-on-colossians': _B([['Colossians','_all',4]]),
+  'chrysostom-homilies-on-1-thessalonians': _B([['1 Thessalonians','_all',5]]),
+  'chrysostom-homilies-on-2-thessalonians': _B([['2 Thessalonians','_all',3]]),
+  'chrysostom-homilies-on-1-timothy': _B([['1 Timothy','_all',6]]),
+  'chrysostom-homilies-on-2-timothy': _B([['2 Timothy','_all',4]]),
+  'chrysostom-homilies-on-titus': _B([['Titus','_all',3]]),
+  'chrysostom-homilies-on-philemon': _B([['Philemon','_all',1]]),
+  'chrysostom-homilies-on-hebrews': _B([['Hebrews','_all',13]]),
+  'augustine-homilies-on-first-john': _B([['1 John','_all',5]])
 };
 
 /* ---------- IndexedDB cache ---------- */
@@ -548,10 +684,11 @@ function normOcdf(bd, bookName){
   return out;
 }
 
-/* Augustine's sectioned scripture works (Tractates on John, Expositions on the
-   Psalms): each section is bucketed into its Bible chapter, using the first
-   scripture reference to the target book, and falling back to the section title
-   ("Chapter I." / "Psalm XVI") when the refs mention only other books. */
+/* Sectioned scripture works (Augustine's Tractates/expositions, the homily
+   series): each section is bucketed into its Bible chapter, using the section
+   heading ("Chapter I." / "Psalm XVI") when the text is a chapter-by-chapter
+   commentary, and otherwise the first scripture reference to the target book —
+   with a continuation fallback to the previous section's chapter. */
 const ROMAN_NUM = s => {
   const t = String(s||'').toUpperCase().trim();
   if (!t) return null;
@@ -579,7 +716,7 @@ function normAug(bd, bookName){
        Tractate on John 15 quotes John 2). Fall back to refs, then to the
        previous section's chapter, for the untitled continuation pieces. */
     let ch = null;
-    const mt = /(?:Chapter|Psalm)\s+(\d+|[MDCLXVI]+)/i.exec(String(sec.title||''));
+    const mt = /^(?:Chapter|Psalm)\s+(\d+|[MDCLXVI]+)/i.exec(String(sec.title||''));
     if (mt) ch = ROMAN_NUM(mt[1]);
     if (!ch){
       const refs = Array.from(new Set(collectRefs(sec))).filter(Boolean);
