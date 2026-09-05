@@ -2,12 +2,13 @@
 
 A study library of **public-domain Christian classics** — the church's accumulated
 teaching on Scripture **and** its early history: Protestant commentaries (Matthew
-Henry, John Gill, Spurgeon, Calvin, Adam Clarke, Albert Barnes, Wesley,
-Jamieson–Fausset–Brown, Keil & Delitzsch), the Catholic tradition (Haydock's
-Bible commentary, Aquinas' *Catena Aurea*), the Orthodox Fathers (Theophylact of
-Ohrid, John Chrysostom), and the great church histories (Eusebius, Socrates,
-Sozomen, Schaff) — with a built-in **text-to-speech** player so every page can be
-read aloud.
+Henry, John Gill, Spurgeon, Calvin, Adam Clarke, Albert Barnes, Wesley, Ryle,
+Luther, Jamieson–Fausset–Brown, Keil & Delitzsch, Lightfoot, Robertson), the
+Catholic tradition (Haydock, Aquinas' *Catena Aurea*), the Church Fathers on
+Scripture (Augustine, Origen, Bede, Cyril of Alexandria, Theodoret, Chrysostom,
+Theophylact of Ohrid, Oecumenius, Ambrosiaster, Hilary, Andrew of Caesarea),
+and the great church histories (Eusebius, Socrates, Sozomen, Schaff) — with a
+built-in **text-to-speech** player so every page can be read aloud.
 
 > This is a library of *classic Christian writing*, not the text of scripture.
 > All works are **public domain — free of copyright as of 2025** (US: published
@@ -15,8 +16,8 @@ read aloud.
 
 ## Features
 
-- **20 works** across traditions: Protestant · Catholic · Orthodox · Church history,
-  covering the whole Bible (deuterocanon included) plus multi-volume histories
+- **31 works** across traditions: Protestant · Catholic · Orthodox · Church Fathers ·
+  Church history, covering the whole Bible (deuterocanon included) plus multi-volume histories
 - **Library / book / chapter / passage** navigation with nearby-note cross-reference panel
 - **Built-in TTS** (Web Speech API): play, pause/resume, stop, per-note **Read** buttons,
   voice/speed/pitch selection, live passage highlighting, and listen-as-you-read
@@ -67,7 +68,9 @@ js/tts.js         Web Speech API engine
 ## Thank-you note
 
 This project is a small dedication of study to the many faithful commentators and
-church historians — Henry, Gill, Wesley, Clarke, Barnes, Calvin, Spurgeon,
-Lightfoot, Robertson, Haydock, Aquinas, Theophylact, Chrysostom, Eusebius, Socrates,
-Sozomen, and Schaff — whose public-domain labors continue to teach the church.
+church historians — Henry, Gill, Wesley, Clarke, Barnes, Calvin, Spurgeon, Ryle,
+Luther, Lightfoot, Robertson, Haydock, Aquinas, Augustine, Origen, Bede, Cyril,
+Theodoret, Chrysostom, Theophylact, Oecumenius, Ambrosiaster, Hilary, Andrew,
+Eusebius, Socrates, Sozomen, and Schaff — whose public-domain labors continue to
+teach the church.
 *Soli Deo Gloria.*

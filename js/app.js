@@ -73,7 +73,7 @@ function renderLibrary(){
       <p>Every work here is in the <b>public domain</b> \u2014 free of copyright as of 2025 \u2014 the accumulated wisdom of the church across the centuries: Reformation and Victorian classics, the Catholic Douay tradition and the Eastern Fathers, and the great early-church histories. Read quietly, or press play and have the commentators <i>read aloud to you</i> with the built-in text-to-speech engine.</p>
       <div class="stats">
         <span><b>${COMMENTARIES.length}</b> works</span>
-        <span><b>Protestant \u00b7 Catholic \u00b7 Orthodox</b></span>
+        <span><b>Protestant \u00b7 Catholic \u00b7 Orthodox \u00b7 Church Fathers \u00b7 History</b></span>
         <span><b>200+ books &amp; church volumes</b></span>
         <span><b>$0</b> \u2014 all free, forever</span>
       </div>

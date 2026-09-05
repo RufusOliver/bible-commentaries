@@ -36,11 +36,26 @@ const COMMENTARIES = [
   { id:'theophylact-of-ohrid', title:'The Explanation of the New Testament', author:'Theophylact of Ohrid', year:1100, era:'Orthodox Byzantine exegesis', desc:'The great Byzantine exegete Theophylact, archbishop of Ohrid \u2014 the voice of the undivided Church\u2019s commentary tradition passed into Orthodoxy\u2019s most beloved New-Testament explanations.', tradition:['Orthodox'], provider:'ocdf', file:'theophylact-of-ohrid.json' },
   { id:'john-chrysostom', title:'Homilies & Expositions on Scripture', author:'John Chrysostom', year:400, era:'Orthodox golden-mouthed father', desc:'The golden-mouthed archbishop of Constantinople, the most quoted of all Eastern fathers \u2014 burning, vivid expositions linked to nearly every book of the Bible.', tradition:['Orthodox'], provider:'ocdf', file:'john-chrysostom.json' },
 
+  /* --- the Fathers on Scripture (OCD scripture-linked quotes) --- */
+  { id:'augustine-of-hippo', title:'Expositions, Homilies & Exposition of the Psalms', author:'Augustine of Hippo', year:410, era:'Doctor of grace', desc:'The bishop of Hippo, the most influential theologian of the West \u2014 his expositions of the Psalms and tractates on John run from here well into the next life, deep and full of love.', tradition:['Church Fathers','Catholic'], provider:'ocdf', file:'augustine-of-hippo.json' },
+  { id:'bede', title:'Commentaries on Luke, Mark, Acts & the Catholic Epistles', author:'Bede the Venerable', year:724, era:'Father of English history', desc:'The Venerable Bede, the first English scholar \u2014 a patient, faithful commentator who gathered the whole tradition of the Fathers into clear notes on the apostolic books.', tradition:['Church Fathers','Anglican'], provider:'ocdf', file:'bede.json' },
+  { id:'origen-of-alexandria', title:'Commentaries & Fragments on Scripture', author:'Origen of Alexandria', year:230, era:'Master of allegory', desc:'The great Alexandrian \u2014 the most learned and prolific exegete of the early church \u2014 his commentaries and homilies preserved across nearly the whole Bible.', tradition:['Church Fathers','Orthodox'], provider:'ocdf', file:'origen-of-alexandria.json' },
+  { id:'cyril-of-alexandria', title:'Commentaries on the Gospels and Prophets', author:'Cyril of Alexandria', year:430, era:'Doctor of the Incarnation', desc:'The patriarch of Alexandria, champion of the Nicene faith \u2014 his great commentaries on the Gospel of John and Luke defend the divinity of Christ on every page.', tradition:['Church Fathers','Orthodox'], provider:'ocdf', file:'cyril-of-alexandria.json' },
+  { id:'theodoret-of-cyrus', title:'Commentaries on the Prophets, Psalms & Epistles', author:'Theodoret of Cyrus', year:450, era:'Antiochian exegete', desc:'The learned bishop of Cyrrhus, last great Antiochene interpreter \u2014 sober, historical exposition of the prophets, the Psalms and the Pauline epistles.', tradition:['Church Fathers','Orthodox'], provider:'ocdf', file:'theodoret-of-cyrus.json' },
+  { id:'oecumenius', title:'Commentary on Acts, Hebrews & Revelation', author:'Oecumenius of Tricca', year:990, era:'Byzantine commentator', desc:'The earliest surviving Byzantine commentator on Revelation \u2014 mystical and apostolic notes on Acts, Hebrews, the Catholic epistles and the Apocalypse.', tradition:['Church Fathers','Catholic'], provider:'ocdf', file:'oecumenius.json' },
+  { id:'ambrosiaster', title:'Commentary on the Pauline Epistles', author:'Ambrosiaster (Pseudo-Ambrose)', year:380, era:'Early Latin exegete', desc:'The anonymous \u201cAmbrose\u2019-star\u201d of the fourth-century West \u2014 the oldest complete Latin commentary on the Pauline epistles, so penetrating that even Erasmus admired him.', tradition:['Church Fathers','Catholic'], provider:'ocdf', file:'ambrosiaster.json' },
+  { id:'hilary-of-poitiers', title:'Commentary on the Gospel of Matthew', author:'Hilary of Poitiers', year:360, era:'Athanasius of the West', desc:'Hilary\u2019s commentary on Matthew \u2014 the first Latin verse-by-verse Gospel commentary that survives, written by the great defender of Nicaea in Gaul.', tradition:['Church Fathers','Catholic'], provider:'ocdf', file:'hilary-of-poitiers.json' },
+  { id:'andreas-of-caesarea', title:'Commentary on the Apocalypse', author:'Andrew of Caesarea', year:610, era:'Byzantine apocalyptic exegesis', desc:'The classic Eastern commentary on Revelation \u2014 sober, orderly and much-loved in the Greek church, drawing on Methodius, Irenaeus and Origen.', tradition:['Church Fathers','Orthodox'], provider:'ocdf', file:'andreas-of-caesarea.json' },
+
   /* --- early church history (OCD structured-text) --- */
   { id:'eusebius-church-history', title:'Church History (Historia Ecclesiastica)', author:'Eusebius of Caesarea', year:313, era:'Early church history', desc:'The father of church history. Eusebius preserves the martyrs, teachers, heretics and apostolic succession of the first three centuries, from the archives of his own day.', tradition:['History'], category:'history', provider:'history', file:'eusebius-ecclesiastical-history.json' },
   { id:'socrates-ecclesiastical-history', title:'Ecclesiastical History', author:'Socrates Scholasticus', year:440, era:'Early church history', desc:'Socrates of Constantinople continues the story through the fourth and fifth centuries \u2014 the age of Constantine through the great councils, told by a careful lay historian.', tradition:['History'], category:'history', provider:'history', file:'socrates-ecclesiastical-history.json' },
   { id:'sozomen-ecclesiastical-history', title:'Ecclesiastical History', author:'Sozomen (Salaminius Hermias)', year:440, era:'Early church history', desc:'A lawyer of Constantinople who wrote a companion history to Socrates \u2014 with the same pageant of councils, heresies and holy men, enriched from Palestinian and monastic sources.', tradition:['History'], category:'history', provider:'history', file:'sozomen-ecclesiastical-history.json' },
-  { id:'schaff-history-of-the-christian-church', title:'History of the Christian Church', author:'Philip Schaff', year:1882, era:'Early church history', desc:'Schaff\u2019s classic history \u2014 the apostolic age, the ante-Nicene church under persecution, and the triumph of Nicene orthodoxy. The standard one-volume survey of the church\u2019s first six centuries.', tradition:['History'], category:'history', provider:'history' }
+  { id:'schaff-history-of-the-christian-church', title:'History of the Christian Church', author:'Philip Schaff', year:1882, era:'Early church history', desc:'Schaff\u2019s classic history \u2014 the apostolic age, the ante-Nicene church under persecution, and the triumph of Nicene orthodoxy. The standard one-volume survey of the church\u2019s first six centuries.', tradition:['History'], category:'history', provider:'history' },
+
+  /* --- more commentaries in OCD structured-text form --- */
+  { id:'ryle-expository-thoughts-matthew', title:'Expository Thoughts on the Gospel of Matthew', author:'J. C. Ryle', year:1856, era:'Evangelical Anglican exposition', desc:'Ryle\u2019s beloved devotional Bible commentary \u2014 a chapter-by-chapter walk through the first Gospel in his warm, plain, homiletic voice.', tradition:['Reformed','Anglican'], category:'history', provider:'history', file:'ryle-expository-thoughts-matthew.json' },
+  { id:'luther-commentary-on-galatians', title:'Commentary on Galatians', author:'Martin Luther', year:1535, era:'The Reformation\u2019s great commentary', desc:'Luther at his best \u2014 the 1535 lectures on Galatians, \u201cmy Katie von Bora\u201d commentary on Christian liberty, grace against every legalism. The trumpet of the Reformation.', tradition:['Lutheran','Reformed'], category:'history', provider:'history', file:'luther-commentary-on-galatians.json' }
 ];
 
 /* Canonical 66-book ordering with public-domain data filenames. */
@@ -138,6 +153,94 @@ const BOOK_OVERRIDES = {
     ['Vol. 1 \u00b7 Apostolic Christianity, AD 1\u2013100','schaff-history-vol-1.json'],
     ['Vol. 2 \u00b7 Ante-Nicene Christianity, AD 100\u2013325','schaff-history-vol-2.json'],
     ['Vol. 3 \u00b7 Nicene & Post-Nicene Christianity, AD 311\u2013600','schaff-history-vol-3.json']
+  ]),
+  'augustine-of-hippo': _B([
+    ['1 Chronicles','_all',28],['1 Corinthians','_all',15],['1 John','_all',5],['1 Kings','_all',18],
+    ['1 Peter','_all',5],['1 Samuel','_all',28],['1 Thessalonians','_all',5],['1 Timothy','_all',6],
+    ['2 Chronicles','_all',30],['2 Corinthians','_all',12],['2 Kings','_all',22],['2 Peter','_all',3],
+    ['2 Samuel','_all',23],['2 Thessalonians','_all',3],['2 Timothy','_all',4],['Acts','_all',23],
+    ['Colossians','_all',4],['Daniel','_all',13],['Deuteronomy','_all',32],['Ecclesiastes','_all',12],
+    ['Ephesians','_all',5],['Exodus','_all',36],['Ezekiel','_all',44],['Galatians','_all',6],
+    ['Genesis','_all',32],['Habakkuk','_all',3],['Hebrews','_all',13],['Hosea','_all',13],
+    ['Isaiah','_all',66],['James','_all',5],['Jeremiah','_all',36],['John','_all',21],['Jonah','_all',4],
+    ['Joshua','_all',24],['Judges','_all',13],['Leviticus','_all',26],['Luke','_all',24],
+    ['Malachi','_all',4],['Mark','_all',16],['Matthew','_all',28],['Micah','_all',7],['Numbers','_all',31],
+    ['Philippians','_all',4],['Proverbs','_all',31],['Psalms','_all',150],['Revelation','_all',22],
+    ['Romans','_all',16],['Sirach (Ecclesiasticus)','_all',51],['Song of Solomon','_all',8],
+    ['Titus','_all',3],['Tobit','_all',13],['Wisdom','_all',16],['Zechariah','_all',13]
+  ]),
+  'bede': _B([
+    ['1 John','_all',5],['1 Kings','_all',20],['1 Peter','_all',5],['1 Samuel','_all',31],
+    ['2 John','_all',1],['2 Kings','_all',24],['2 Peter','_all',3],['3 John','_all',1],['Acts','_all',28],
+    ['Ecclesiastes','_all',12],['Exodus','_all',39],['Ezra','_all',10],['Genesis','_all',28],
+    ['Habakkuk','_all',3],['Hebrews','_all',12],['Isaiah','_all',61],['James','_all',5],
+    ['Jeremiah','_all',31],['John','_all',21],['Jude','_all',1],['Leviticus','_all',26],['Luke','_all',24],
+    ['Mark','_all',16],['Matthew','_all',28],['Nehemiah','_all',13],['Proverbs','_all',31],
+    ['Psalms','_all',147],['Revelation','_all',22],['Romans','_all',12],['Song of Solomon','_all',8],
+    ['Tobit','_all',14]
+  ]),
+  'origen-of-alexandria': _B([
+    ['1 Chronicles','_all',28],['1 Corinthians','_all',15],['1 John','_all',5],['1 Kings','_all',22],
+    ['1 Peter','_all',4],['1 Samuel','_all',28],['1 Thessalonians','_all',5],['1 Timothy','_all',6],
+    ['2 Corinthians','_all',12],['2 Kings','_all',25],['2 Timothy','_all',4],['Acts','_all',27],
+    ['Amos','_all',8],['Daniel','_all',13],['Deuteronomy','_all',32],['Ecclesiastes','_all',12],
+    ['Ephesians','_all',6],['Exodus','_all',34],['Ezekiel','_all',44],['Galatians','_all',6],
+    ['Genesis','_all',49],['Hebrews','_all',13],['Hosea','_all',14],['Isaiah','_all',66],
+    ['James','_all',5],['Jeremiah','_all',50],['Job','_all',41],['John','_all',21],['Joshua','_all',24],
+    ['Judges','_all',16],['Lamentations','_all',4],['Leviticus','_all',26],['Luke','_all',24],
+    ['Malachi','_all',4],['Mark','_all',15],['Matthew','_all',27],['Numbers','_all',33],
+    ['Philippians','_all',4],['Proverbs','_all',31],['Psalms','_all',150],['Revelation','_all',21],
+    ['Romans','_all',16],['Sirach (Ecclesiasticus)','_all',50],['Song of Solomon','_all',6],
+    ['Titus','_all',3],['Tobit','_all',11],['Wisdom','_all',18],['Zechariah','_all',13]
+  ]),
+  'cyril-of-alexandria': _B([
+    ['1 Corinthians','_all',15],['1 John','_all',5],['1 Peter','_all',4],['2 Corinthians','_all',5],
+    ['2 Peter','_all',3],['Acts','_all',15],['Amos','_all',9],['Exodus','_all',34],['Genesis','_all',49],
+    ['Hebrews','_all',13],['Hosea','_all',14],['Isaiah','_all',66],['James','_all',5],
+    ['Jeremiah','_all',51],['John','_all',21],['Jonah','_all',4],['Luke','_all',24],['Mark','_all',8],
+    ['Matthew','_all',28],['Nahum','_all',3],['Obadiah','_all',1],['Philippians','_all',2],
+    ['Proverbs','_all',27],['Psalms','_all',105],['Romans','_all',15],['Sirach (Ecclesiasticus)','_all',40],
+    ['Song of Solomon','_all',8],['Wisdom','_all',9]
+  ]),
+  'theodoret-of-cyrus': _B([
+    ['1 Corinthians','_all',16],['1 Peter','_all',2],['1 Timothy','_all',5],['2 Corinthians','_all',13],
+    ['2 Timothy','_all',4],['Acts','_all',28],['Baruch','_all',2],['Daniel','_all',12],
+    ['Ephesians','_all',6],['Ezekiel','_all',47],['Galatians','_all',6],['Hebrews','_all',13],
+    ['Hosea','_all',11],['Isaiah','_all',66],['Jeremiah','_all',51],['John','_all',20],
+    ['Philippians','_all',4],['Prayer of Azariah','_all',1],['Psalms','_all',146],['Romans','_all',16],
+    ['Ruth','_all',4],['Song of Solomon','_all',8],['Titus','_all',2]
+  ]),
+  'oecumenius': _B([
+    ['1 Corinthians','_all',15],['1 John','_all',5],['1 Peter','_all',5],['1 Timothy','_all',6],
+    ['2 John','_all',1],['2 Peter','_all',3],['2 Timothy','_all',4],['3 John','_all',1],['Acts','_all',28],
+    ['Hebrews','_all',13],['James','_all',5],['Jude','_all',1],['Philemon','_all',1],
+    ['Revelation','_all',22],['Romans','_all',14],['Titus','_all',3]
+  ]),
+  'ambrosiaster': _B([
+    ['1 Corinthians','_all',16],['1 Timothy','_all',5],['2 Corinthians','_all',13],
+    ['2 Thessalonians','_all',3],['2 Timothy','_all',4],['Colossians','_all',4],['Ephesians','_all',6],
+    ['Galatians','_all',6],['John','_all',16],['Philemon','_all',1],['Philippians','_all',4],
+    ['Romans','_all',16]
+  ]),
+  'hilary-of-poitiers': _B([
+    ['1 Corinthians','_all',15],['John','_all',20],['Mark','_all',14],['Matthew','_all',28],
+    ['Philippians','_all',3],['Proverbs','_all',8],['Psalms','_all',139]
+  ]),
+  'andreas-of-caesarea': _B([
+    ['1 John','_all',5],['1 Peter','_all',5],['2 Peter','_all',3],['Revelation','_all',22],
+    ['James','_all',5],['Jude','_all',1]
+  ]),
+  'ryle-expository-thoughts-matthew': _B([
+    ['Matthew 1','_all',2],['Matthew 2','_all',2],['Matthew 3','_all',2],['Matthew 4','_all',2],
+    ['Matthew 5','_all',4],['Matthew 6','_all',4],['Matthew 7','_all',3],['Matthew 8','_all',3],
+    ['Matthew 9','_all',3],['Matthew 10','_all',4],['Matthew 11','_all',3],['Matthew 12','_all',4],
+    ['Matthew 13','_all',5],['Matthew 15','_all',4],['Matthew 16','_all',4],['Matthew 17','_all',3],
+    ['Matthew 18','_all',3],['Matthew 19','_all',3],['Matthew 20','_all',4],['Matthew 21','_all',4],
+    ['Matthew 22','_all',3],['Matthew 23','_all',3],['Matthew 24','_all',4],['Matthew 25','_all',3],
+    ['Matthew 26','_all',7],['Matthew 27','_all',5],['Matthew 28','_all',2]
+  ]),
+  'luther-commentary-on-galatians': _B([
+    ['Galatians','luther-commentary-on-galatians.json',6]
   ])
 };
 
