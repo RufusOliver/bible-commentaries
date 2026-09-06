@@ -113,7 +113,8 @@ const COMMENTARIES = [
 
   /* --- more commentaries in OCD structured-text form --- */
   { id:'ryle-expository-thoughts-matthew', title:'Expository Thoughts on the Gospel of Matthew', author:'J. C. Ryle', year:1856, era:'Evangelical Anglican exposition', desc:'Ryle\u2019s beloved devotional Bible commentary \u2014 a chapter-by-chapter walk through the first Gospel in his warm, plain, homiletic voice.', tradition:['Reformed','Anglican'], category:'history', provider:'history', file:'ryle-expository-thoughts-matthew.json' },
-  { id:'luther-commentary-on-galatians', title:'Commentary on Galatians', author:'Martin Luther', year:1535, era:'The Reformation\u2019s great commentary', desc:'Luther at his best \u2014 the 1535 lectures on Galatians, \u201cmy Katie von Bora\u201d commentary on Christian liberty, grace against every legalism. The trumpet of the Reformation.', tradition:['Lutheran','Reformed'], category:'history', provider:'history', file:'luther-commentary-on-galatians.json' }
+  { id:'luther-commentary-on-galatians', title:'Commentary on Galatians', author:'Martin Luther', year:1535, era:'The Reformation\u2019s great commentary', desc:'Luther at his best \u2014 the 1535 lectures on Galatians, \u201cmy Katie von Bora\u201d commentary on Christian liberty, grace against every legalism. The trumpet of the Reformation.', tradition:['Lutheran','Reformed'], category:'history', provider:'history', file:'luther-commentary-on-galatians.json' },
+  { id:'luther-lenker-sermons', title:'The Church Postil \u2014 Festival and Epistle Sermons', author:'Martin Luther', year:1521, era:'The Reformation\u2019s great homilist', desc:'Luther preaching the church year \u2014 his beloved Church Postil of 1521\u20131522, the Wartburg sermons on the Gospel and Epistle lessons, in Lenker\u2019s classic English translation. The people\u2019s preacher at his warmest.', tradition:['Lutheran','Reformed'], provider:'postil', file:'luther-lenker-sermons.json' }
 ];
 
 /* Canonical 66-book ordering with public-domain data filenames. */
@@ -299,6 +300,13 @@ const BOOK_OVERRIDES = {
   ]),
   'luther-commentary-on-galatians': _B([
     ['Galatians','luther-commentary-on-galatians.json',6]
+  ]),
+  'luther-lenker-sermons': _B([
+    ['Matthew','_all',25],['Mark','_all',16],['Luke','_all',24],['John','_all',21],
+    ['Acts','_all',13],['Romans','_all',15],['1 Corinthians','_all',15],['2 Corinthians','_all',6],
+    ['Galatians','_all',5],['Ephesians','_all',6],['Philippians','_all',4],['Colossians','_all',3],
+    ['1 Thessalonians','_all',4],['2 Thessalonians','_all',1],['Titus','_all',3],['Hebrews','_all',9],
+    ['1 Peter','_all',4],['Isaiah','_all',60],['Sirach (Ecclesiasticus)','_all',15]
   ]),
   'jerome': _B([
     ['1 Chronicles','_all',28],['1 Corinthians','_all',15],['1 Kings','_all',21],['1 Samuel','_all',24],
@@ -543,6 +551,7 @@ function bookURL(cid,bk){
   if (p==='ocdf')     return RAW+'/data/church-fathers/'+c.file;
   if (p==='history')  return RAW+'/data/structured-text/'+((bk.f && bk.f!=='_all') ? bk.f : (c.file||''));
   if (p==='aug')      return RAW+'/data/structured-text/'+c.file;
+  if (p==='postil')   return RAW+'/data/sermons/'+c.file;
   return RAW+'/data/commentaries/'+cid+'/'+bk.f;
 }
 const manifestURL = cid => RAW+'/data/commentaries/'+cid+'/_manifest.json';
@@ -775,6 +784,98 @@ function normHistory(bd, bookName, sectionIndex){
   return out;
 }
 
+/* Luther's Church Postil: sermons carry a human-readable lesson reference
+   ("Romans 13, 11-14") OCR'd from a 1900s print edition, so the book token
+   and chapter must be recovered tolerantly. Bucket each sermon into its
+   scripture chapter. */
+const POSTIL_BOOK = {
+  'mat':'Matthew','matt':'Matthew','matt.':'Matthew','math':'Matthew','math.':'Matthew','math,':'Matthew','mat.':'Matthew','mat,':'Matthew','matthew':'Matthew','at':'Matthew','at.':'Matthew','saint matthew':'Matthew','m at':'Matthew','st. mat':'Matthew',
+  'mar':'Mark','mar.':'Mark','marj':'Mark','marjc':'Mark','mark':'Mark','marc':'Mark',
+  'luk':'Luke','luk.':'Luke','lucc':'Luke','lucas':'Luke','luce':'Luke','lujcc':'Luke','luke':'Luke','luke,':'Luke','luke.':'Luke','luke:':'Luke','lulce':'Luke','saint luke':'Luke',
+  'jn':'John','joh':'John','joh.':'John','jojin':'John','jhn':'John','jnin':'John','john':'John','john,':'John','john.':'John','saint john':'John','st. john':'John',
+  'act':'Acts','acts':'Acts','acts.':'Acts','the acts':'Acts',
+  'rom':'Romans','rom.':'Romans','romans':'Romans','romans.':'Romans',
+  'cor':'1 Corinthians','cor.':'1 Corinthians','corinthians':'1 Corinthians',
+  'gal':'Galatians','gal.':'Galatians','galat':'Galatians','galatians':'Galatians',
+  'eph':'Ephesians','ephes.':'Ephesians','ephesians':'Ephesians',
+  'phil':'Philippians','phil.':'Philippians','philippians':'Philippians',
+  'col':'Colossians','colos.':'Colossians','colossians':'Colossians',
+  'thess':'1 Thessalonians','thess.':'1 Thessalonians','thessaionians':'1 Thessalonians','thessalonians':'1 Thessalonians',
+  'tim':'1 Timothy','timothy':'1 Timothy',
+  'tit':'Titus','tit.':'Titus','titus':'Titus',
+  'philemon':'Philemon',
+  'heb':'Hebrews','heb.':'Hebrews','hebrew':'Hebrews','hebrews':'Hebrews',
+  'jas':'James','james':'James','james.':'James',
+  'pet':'1 Peter','pet.':'1 Peter','peter':'1 Peter',
+  'rev':'Revelation','rev.':'Revelation','revelation':'Revelation','apocalypse':'Revelation',
+  'gen':'Genesis','gen.':'Genesis','genesis':'Genesis','exod':'Exodus','exo':'Exodus','exodus':'Exodus','lev':'Leviticus','leviticus':'Leviticus','num':'Numbers','num.':'Numbers','numbers':'Numbers','deut':'Deuteronomy','deuteronomy':'Deuteronomy','jos':'Joshua','joshua':'Joshua','judg':'Judges','judges':'Judges','ruth':'Ruth','sam':'1 Samuel','samuel':'1 Samuel','kings':'1 Kings',
+  'esth.':'Esther','esther':'Esther','job':'Job',
+  'ps':'Psalms','ps.':'Psalms','psalm':'Psalms','psalms':'Psalms','prov':'Proverbs','prov.':'Proverbs','proverbs':'Proverbs','eccles':'Ecclesiastes','ecclesiastes':'Ecclesiastes','song':'Song of Solomon','song of solomon':'Song of Solomon',
+  'isa':'Isaiah','isa.':'Isaiah','isaias':'Isaiah','isaiah':'Isaiah','jer':'Jeremiah','jer.':'Jeremiah','jeremiah':'Jeremiah','lamentations':'Lamentations','ezek':'Ezekiel','ezechiel':'Ezekiel','ezekiel':'Ezekiel','dan':'Daniel','dan.':'Daniel','daniel':'Daniel',
+  'hosea':'Hosea','joel':'Joel','amos':'Amos','obadiah':'Obadiah','jonah':'Jonah','micah':'Micah','nahum':'Nahum','habakkuk':'Habakkuk','zephaniah':'Zephaniah','haggai':'Haggai','zachariah':'Zechariah','zechariah':'Zechariah','malachi':'Malachi',
+  'ecclesiasticus':'Sirach (Ecclesiasticus)','ecclesiasticus (sirach)':'Sirach (Ecclesiasticus)','sirach':'Sirach (Ecclesiasticus)','wisdom':'Wisdom','baruch':'Baruch','tobit':'Tobit','judith':'Judith','maccabees':'1 Maccabees'
+};
+const POSTIL_ORDINAL = { first:'1', second:'2', third:'3', fourth:'4' };
+const POSTIL_NUMBERED = { corinthians:'1 Corinthians', thessalonians:'1 Thessalonians', thessaionians:'1 Thessalonians', timothy:'1 Timothy', peter:'1 Peter', samuel:'1 Samuel', kings:'1 Kings', chronicles:'1 Chronicles', maccabees:'1 Maccabees', john:'1 John', cor:'1 Corinthians', thess:'1 Thessalonians', tim:'1 Timothy', pet:'1 Peter' };
+const POSTIL_MAXCH = { 'Matthew':28,'Mark':16,'Luke':24,'John':21,'Acts':28,'Romans':16,'1 Corinthians':16,'2 Corinthians':13,'Galatians':6,'Ephesians':6,'Philippians':4,'Colossians':4,'1 Thessalonians':5,'2 Thessalonians':3,'1 Timothy':6,'2 Timothy':4,'Titus':3,'Philemon':1,'Hebrews':13,'James':5,'1 Peter':5,'2 Peter':3,'1 John':5,'Revelation':22,'Genesis':50,'Exodus':40,'Leviticus':27,'Numbers':36,'Deuteronomy':34,'Joshua':24,'Judges':21,'Ruth':4,'1 Samuel':31,'2 Samuel':24,'1 Kings':22,'2 Kings':25,'1 Chronicles':29,'2 Chronicles':36,'Esther':10,'Job':42,'Psalms':150,'Proverbs':31,'Ecclesiastes':12,'Song of Solomon':8,'Isaiah':66,'Jeremiah':52,'Lamentations':5,'Ezekiel':48,'Daniel':12,'Hosea':14,'Joel':3,'Amos':9,'Obadiah':1,'Jonah':4,'Micah':7,'Nahum':3,'Habakkuk':3,'Zephaniah':3,'Haggai':2,'Zechariah':14,'Malachi':4,'Wisdom':19,'Sirach (Ecclesiasticus)':51,'Baruch':6,'Tobit':14,'Judith':16,'1 Maccabees':16,'2 Maccabees':15 };
+function postilRef(raw){
+  const s = String(raw||'').replace(/\s+/g,' ').trim().toLowerCase();
+  if (/^[\d ]+at[.\s]/.test(s)){
+    const m = /(\d{1,2})[.,\s]/.exec(s.replace(/^[\d ]+at[.\s]/,''));
+    return { book:'Matthew', ch:m?parseInt(m[1],10):0 };
+  }
+  const tm = /^(?:([12])\s+)?([a-zA-Z]+(?:[.\s]+[a-zA-Z]+)*)/.exec(s);
+  if (!tm) return { book:null, ch:0 };
+  const prefix = tm[1];
+  let tok = tm[2].trim().toLowerCase().replace(/\s+/g,' ').replace(/[.]\s*$/,'');
+  const full = tok;
+  let book = POSTIL_BOOK[tok];
+  if (!book){
+    /* ordinal spellings: "First Corinthians" -> 1 Corinthians */
+    const mm = /^(first|second|third|fourth)\s+([a-z]+)$/.exec(tok);
+    const base = mm && POSTIL_NUMBERED[mm[2]] ? POSTIL_NUMBERED[mm[2]] : null;
+    if (base) book = base.replace('1', POSTIL_ORDINAL[mm[1]]);
+  }
+  if (!book && prefix) book = POSTIL_NUMBERED[tok] ? POSTIL_NUMBERED[tok].replace('1',prefix) : null;
+  if (!book){ tok = tok.split(/\s+/)[0]; book = POSTIL_BOOK[tok]; }  /* OCR junk trailing the book name */
+  if (!book) return { book:null, ch:0 };
+  /* work back to the char offset of the resolved book token so the tail keeps its OCR digits */
+  const leadPos = tm[0].length - (full.length - tok.length);
+  let tail = s.slice(leadPos).replace(/\^/g,'').replace(/\*/g,'').replace(/^\s*\/(\d)/,'1$1');
+  const cap = POSTIL_MAXCH[book] || 66;
+  let ch = 0;
+  let rm = /^[\s,:]*([ivxlcdm]{1,4})[,\s(:]/.exec(tail);
+  if (rm) ch = ROMAN_NUM(rm[1]) || 0;
+  if (!ch){ let m2 = /^[ilILjJ](\d)/.exec(tail); if (m2) ch = 10+parseInt(m2[1],10); }
+  if (!ch){
+    /* guardedly trust a colon-part when the prefix is garbled: "lJf:16-2Jf" */
+    const ci = tail.indexOf(':');
+    const pre = ci>0 ? tail.slice(0,ci) : '';
+    if (pre && !/\d/.test(pre) && !/^[ivxlcdm]{1,4}$/.test(pre)){
+      let d2 = /(\d{1,2})/.exec(tail.slice(ci+1));
+      if (d2){ const v = parseInt(d2[1],10); ch = (v<=cap && v>=1) ? v : 0; }
+    }
+  }
+  if (!ch){ let h = tail.slice(0,10).replace(/[ilILjJ]/g,'1'); let d = /(\d{1,2})/.exec(h); if (d) ch = parseInt(d[1],10); }
+  if (!ch){ let d = /(\d{1,2})/.exec(tail); if (d) ch = parseInt(d[1],10); }
+  return { book, ch:(ch>cap?0:ch) };
+}
+function normPostil(bd, bookName){
+  const out = [];
+  const arr = Array.isArray(bd.data) ? bd.data : ((bd.data && bd.data.sections)||[]);
+  arr.forEach(s=>{
+    const pr = (s.primary_reference)||{};
+    const r = postilRef(pr.raw);
+    if (r.book !== bookName || !r.ch) return;
+    const text = (s.content_blocks||[]).map(b=>b.trim()).filter(Boolean).join('\n\n');
+    if (!text) return;
+    /* the print edition prefixes "286 " and suffixes " . 167" page numbers */
+    const title = String(s.title||'').replace(/^\d+\s*/,'').replace(/[.\s]*\d{1,4}$/,'').trim();
+    out.push({ chapter:r.ch, verse_range:null, verse_text:'', commentary_text:text, word_count:s.word_count || wc(text), title, cross_references:[] });
+  });
+  return out;
+}
+
 /* ---------- bucketing ---------- */
 function normalizeBook(bd, declared, ctx){
   ctx = ctx || {};
@@ -785,6 +886,7 @@ function normalizeBook(bd, declared, ctx){
   else if (p==='ocdf')    entries = normOcdf(bd, ctx.bookName);
   else if (p==='history') entries = normHistory(bd, ctx.bookName, ctx.sectionIndex);
   else if (p==='aug')     entries = normAug(bd, ctx.bookName);
+  else if (p==='postil')  entries = normPostil(bd, ctx.bookName);
   else entries = (bd.data||[]).map(e=>({ chapter:e.chapter||0, verse_range:e.verse_range, verse_text:e.verse_text, commentary_text:e.commentary_text, word_count:e.word_count, cross_references:e.cross_references||[], title:e.title||'' }));
 
   const byChapter = {};

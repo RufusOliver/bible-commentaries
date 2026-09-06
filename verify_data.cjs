@@ -1,0 +1,13 @@
+const fs=require('fs'), vm=require('vm');
+const ctx={}; vm.createContext(ctx);
+vm.runInContext(fs.readFileSync('js/data.js','utf8'),ctx);
+const C=vm.runInContext('COMMENTARIES',ctx);
+const OV=vm.runInContext('BOOK_OVERRIDES',ctx);
+const ovKeys=Object.keys(OV);
+console.log('works:',C.length,'| override entries:',ovKeys.length);
+const ids=new Set(C.map(c=>c.id));
+console.log('overrides with no matching work:',ovKeys.filter(k=>!ids.has(k)));
+console.log('non-ocd works missing overrides:',C.filter(c=>(c.provider||'ocd')!=='ocd'&&!OV[c.id]).map(c=>c.id));
+console.log('ocdf works missing file:',C.filter(c=>c.provider==='ocdf'&&!c.file).map(c=>c.id));
+const dupIds=C.map(c=>c.id).filter((id,i,a)=>a.indexOf(id)!==i);
+console.log('duplicate ids:',dupIds);

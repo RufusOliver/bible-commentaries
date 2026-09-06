@@ -9,7 +9,7 @@ Nicholas of Lyra), the Church Elders on Scripture (Augustine's *Tractates on
 John*, *Expositions on the Psalms* and *Homilies on 1 John*; Chrysostom's full
 homily series on Matthew, John, Acts, Romans, the Pauline Epistles and Hebrews;
 Jerome, Origen, Ambrose, Ephrem, Gregory the Great's *Moralia in Job*, Gregory
-of Nyssa, Cyril, Theodoret, Theodore, Taskodad's Syriac commentaries, Hippolytus
+of Nyssa, Cyril, Theodoret, Theodore, Isho'dad's Syriac commentaries, Hippolytus
 on Daniel, Tyconius and Victorinus on the Apocalypse, and fifty more), and the
 great church histories (Eusebius, Socrates, Sozomen, Schaff) — with a built-in
 **text-to-speech** player so every page can be read aloud.
@@ -20,7 +20,7 @@ great church histories (Eusebius, Socrates, Sozomen, Schaff) — with a built-in
 
 ## Features
 
-- **89 works** across traditions: Protestant · Catholic · Orthodox · Church Elders ·
+- **90 works** across traditions: Protestant · Catholic · Orthodox · Church Elders ·
   Church history, covering the whole Bible (deuterocanon included) plus multi-volume histories
 - **Library / book / chapter / passage** navigation with nearby-note cross-reference panel
 - **Built-in TTS** (Web Speech API): play, pause/resume, stop, per-note **Read** buttons,
